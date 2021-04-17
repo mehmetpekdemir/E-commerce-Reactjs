@@ -1,66 +1,75 @@
-import React, {FC} from 'react';
+import React, { FC } from "react";
 
 import usePagination from "../Pagination/usePagination";
-import PerfumeCardItem from "../PerfumeCardItem/PerfumeCardItem";
+import PhoneCardItem from "../PhoneCardItem/PhoneCardItem";
 import PaginationItem from "../Pagination/PaginationItem";
 import SearchForm from "../SearchForm/SearchForm";
-import {Perfume} from "../../types/types";
+import { Phone } from "../../types/types";
 
 type PropsType = {
-    perfumes: Array<Perfume>
-    itemsPerPage: number
-    startFrom?: number
-    searchByData: Array<{ label: string, value: string }>
+  phones: Array<Phone>;
+  itemsPerPage: number;
+  startFrom?: number;
+  searchByData: Array<{ label: string; value: string }>;
 };
 
-const MenuCards: FC<PropsType> = ({perfumes, itemsPerPage, startFrom, searchByData}) => {
-    const {
-        slicedData,
-        pagination,
-        prevPage,
-        nextPage,
-        changePage,
-        setFilteredData,
-        setSearching
-    } = usePagination({itemsPerPage, perfumes, startFrom});
+const MenuCards: FC<PropsType> = ({
+  phones,
+  itemsPerPage,
+  startFrom,
+  searchByData,
+}) => {
+  const {
+    slicedData,
+    pagination,
+    prevPage,
+    nextPage,
+    changePage,
+    setFilteredData,
+    setSearching,
+  } = usePagination({ itemsPerPage, phones, startFrom });
 
-    return (
-        <div className="container">
-            <div className="container-fluid row mt-5 ml-2">
-                <SearchForm
-                    data={perfumes}
-                    searchByData={searchByData}
-                    setFilteredData={setFilteredData}
-                    setSearching={setSearching}/>
-            </div>
-            <div className="row mt-3 ml-2">
-                <div className="container-fluid">
-                    <PaginationItem
-                        pagination={pagination}
-                        prevPage={prevPage}
-                        changePage={changePage}
-                        nextPage={nextPage}/>
-                    <div className="row">
-                        {slicedData.map((perfume: Perfume) => {
-                            return (
-                                <PerfumeCardItem
-                                    key={perfume.id}
-                                    perfume={perfume}
-                                    colSize={3}
-                                    link={"/product"}
-                                    btnName={"SHOW MORE"}/>
-                            );
-                        })}
-                    </div>
-                    <PaginationItem
-                        pagination={pagination}
-                        prevPage={prevPage}
-                        changePage={changePage}
-                        nextPage={nextPage}/>
-                </div>
-            </div>
+  return (
+    <div className="container">
+      <div className="container-fluid row mt-5 ml-2">
+        <SearchForm
+          data={phones}
+          searchByData={searchByData}
+          setFilteredData={setFilteredData}
+          setSearching={setSearching}
+        />
+      </div>
+      <div className="row mt-3 ml-2">
+        <div className="container-fluid">
+          <PaginationItem
+            pagination={pagination}
+            prevPage={prevPage}
+            changePage={changePage}
+            nextPage={nextPage}
+          />
+          <div className="row">
+            {slicedData.map((phone: Phone) => {
+              return (
+                <PhoneCardItem
+                  key={phone.id}
+                  phone={phone}
+                  colSize={3}
+                  link={"/product"}
+                  btnName={"SHOW MORE"}
+                />
+              );
+            })}
+          </div>
+          <PaginationItem
+            pagination={pagination}
+            prevPage={prevPage}
+            changePage={changePage}
+            nextPage={nextPage}
+          />
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default MenuCards;
