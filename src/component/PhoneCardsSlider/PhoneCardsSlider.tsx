@@ -10,7 +10,7 @@ import { Phone } from "../../types/types";
 
 const PhoneCardsSlider: FC = () => {
   const phones: Array<Phone> = useSelector(
-    (state: AppStateType) => state.perfume.perfumes
+    (state: AppStateType) => state.phone.phones
   );
 
   const addCarouselItems = (array: Array<Phone>, counter: number) => {

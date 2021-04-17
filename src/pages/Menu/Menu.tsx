@@ -16,7 +16,6 @@ const Menu: FC = () => {
     (state: AppStateType) => state.phone.phones
   );
   const [filterParams, setFilterParams] = useState<FilterParamsType>({
-    phones: [],
     prices: [],
   });
   const { state } = useLocation<{ id: string }>();

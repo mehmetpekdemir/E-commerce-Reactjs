@@ -9,19 +9,18 @@ import {
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { formReset } from "../../redux/thunks/admin-thunks";
 import { fetchUserInfo } from "../../redux/thunks/user-thunks";
 import { fetchPhones } from "../../redux/thunks/phone-thunks";
 import PersonalOrdersList from "./PersonalOrdersList/PersonalOrdersList";
 import ChangePassword from "./ChangePassword/ChangePassword";
 import PersonalData from "./PersonalData/PersonalData";
 import AccountItem from "./AccountItem";
-import AddPhone from "./AddPhone/AddPhone";
+//import AddPhone from "./AddPhone/AddPhone";
 import OrdersList from "./OrdersList/OrdersList";
-import UsersList from "./UsersList/UsersList";
+import UsersList from "./UsersList/UsersLists";
 import PhoneList from "./PhoneList/PhoneList";
 import ManageUser from "./ManageUser/ManageUser";
-import EditPhone from "./EditPhone/EditPhone";
+//import EditPhone from "./EditPhone/EditPhone";
 import ManageUserOrder from "./ManageUserOrder/ManageUserOrder";
 import "./Account.css";
 
@@ -29,12 +28,10 @@ const Account: FC = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(formReset());
     dispatch(fetchUserInfo());
     dispatch(fetchPhones());
   }, []);
 
-  // @ts-ignore
   return (
     <div className="account-container container">
       <div className="row mt-5">
@@ -119,19 +116,6 @@ const Account: FC = () => {
           />
           {localStorage.getItem("userRole") === "ADMIN" ? (
             <>
-              <Route path="/account/admin/add" component={() => <AddPhone />} />
-              <Route
-                exact
-                path="/account/admin/phones"
-                component={() => <PhoneList />}
-              />
-              <Route
-                exact
-                path="/account/admin/phones/:id"
-                component={(props: RouteComponentProps<{ id: string }>) => (
-                  <EditPhone {...props} />
-                )}
-              />
               <Route
                 exact
                 path="/account/admin/orders"

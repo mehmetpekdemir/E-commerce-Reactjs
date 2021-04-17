@@ -66,7 +66,7 @@ export const updateUserPassword = (data: UserResetPasswordData) => async (
   }
 };
 
-export const addReviewToPerfume = (review: ReviewData) => async (
+export const addReviewToPhone = (review: ReviewData) => async (
   dispatch: Dispatch
 ) => {
   try {
