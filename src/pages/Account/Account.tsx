@@ -34,6 +34,7 @@ const Account: FC = () => {
     dispatch(fetchPhones());
   }, []);
 
+  // @ts-ignore
   return (
     <div className="account-container container">
       <div className="row mt-5">
