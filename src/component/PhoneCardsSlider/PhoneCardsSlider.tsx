@@ -1,17 +1,23 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { IMG_URL } from "../../utils/constants/url";
+import { fetchPhones } from "../../redux/thunks/phone-thunks";
 import "./PhoneCardsSlider.css";
 import { AppStateType } from "../../redux/reducers/root-reducer";
 import { Phone } from "../../types/types";
 
 const PhoneCardsSlider: FC = () => {
+  const dispatch = useDispatch();
   const phones: Array<Phone> = useSelector(
     (state: AppStateType) => state.phone.phones
   );
+
+  useEffect(() => {
+    dispatch(fetchPhones());
+  }, []);
 
   const addCarouselItems = (array: Array<Phone>, counter: number) => {
     const phonesId: Array<number> = [

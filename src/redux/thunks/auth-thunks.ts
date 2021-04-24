@@ -38,7 +38,7 @@ export const registration = (userRegistrationData: UserRegistration) => async (
   try {
     dispatch(showLoader());
     const response = await axios.post(
-      API_BASE_URL + "/registration",
+      API_BASE_URL + "/auth/registration",
       userRegistrationData
     );
     dispatch(registerSuccess(response.data));
