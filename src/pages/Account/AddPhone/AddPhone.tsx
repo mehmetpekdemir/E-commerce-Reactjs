@@ -12,8 +12,8 @@ import { fetchPhones } from "../../../redux/thunks/phone-thunks";
 type InitialStateType = {
   productName: string;
   productCode: string;
-  productPrice: string;
-  stockAmount: string;
+  productPrice: number;
+  stockAmount: number;
   image: string;
   productDescription: string;
   fileName: string;
@@ -34,8 +34,8 @@ const AddPhone: FC = () => {
   const initialState: InitialStateType = {
     productName: "",
     productCode: "",
-    productPrice: "",
-    stockAmount: "",
+    productPrice: 0,
+    stockAmount: 0,
     image: "",
     productDescription: "",
     fileName: "",
@@ -89,7 +89,7 @@ const AddPhone: FC = () => {
     event.preventDefault();
 
     const bodyFormData: FormData = new FormData();
-    bodyFormData.append("file", fileName);
+    bodyFormData.append("fileName", fileName);
     bodyFormData.append(
       "phone",
       new Blob(
@@ -208,7 +208,7 @@ const AddPhone: FC = () => {
                 placeholder="Enter the stock amount"
                 onChange={handleInputChange}
               />
-              <div className="invalid-feedback">{stockAmount}</div>
+              <div className="invalid-feedback">{stockAmountError}</div>
             </div>
             <div className="col">
               <label>Brand: </label>
