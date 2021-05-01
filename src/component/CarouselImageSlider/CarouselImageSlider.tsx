@@ -4,14 +4,19 @@ import { Link } from "react-router-dom";
 
 const sliderItems = [
   {
-    id: "98",
-    name: "Photo 1",
-    url: "https://i.ibb.co/dkpHPXQ/1million-ENG.jpg",
-  },
-  {
     id: "59",
     name: "Photo 2",
-    url: "https://i.ibb.co/C0vbNcy/dior-ENG.jpg",
+    url: "https://i.ibb.co/kJnb7Kd/b3.jpg",
+  },
+  {
+    id: "98",
+    name: "Photo 1",
+    url: "https://i.ibb.co/x61LHjb/b2.jpg",
+  },
+  {
+    id: "11",
+    name: "Photo 3",
+    url: "https://i.ibb.co/BqdXL7j/b1.jpg",
   },
 ];
 

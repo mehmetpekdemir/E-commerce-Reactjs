@@ -24,6 +24,7 @@ import ManageUser from "./ManageUser/ManageUser";
 //import EditPhone from "./EditPhone/EditPhone";
 import ManageUserOrder from "./ManageUserOrder/ManageUserOrder";
 import "./Account.css";
+import AddPhone from "./AddPhone/AddPhone";
 
 const Account: FC = () => {
   const dispatch = useDispatch();
@@ -122,6 +123,11 @@ const Account: FC = () => {
                 exact
                 path="/account/admin/phones"
                 component={() => <PhoneList />}
+              />
+              <Route
+                exact
+                path="/account/admin/add"
+                component={() => <AddPhone />}
               />
               <Route
                 exact

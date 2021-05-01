@@ -14,16 +14,16 @@ export type Phone = {
 };
 
 export type PhoneErrors = {
-  name: string;
-  code: string;
-  price: number;
-  stockAmount: number;
-  image: string;
-  description: string;
-  filename: string;
-  color: string;
-  brand: any;
-  internalMemory: string;
+  productNameError: string;
+  productCodeError: string;
+  productPriceError: number;
+  stockAmountError: number;
+  imageError: string;
+  productDescriptionError: string;
+  fileNameError: string;
+  colorError: string;
+  brandError: any;
+  internalMemoryError: string;
 };
 
 export type Review = {
