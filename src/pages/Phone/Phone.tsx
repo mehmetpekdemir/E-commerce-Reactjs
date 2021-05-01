@@ -44,7 +44,7 @@ const Phone: FC<RouteComponentProps<{ id: string }>> = ({ match }) => {
         <div className="col-md-5">
           <div>
             <img
-              src={IMG_URL + phone.fileName}
+              src={IMG_URL + `${phone.fileName}`}
               className="rounded mx-auto w-100"
               alt="empty"
             />
@@ -53,9 +53,6 @@ const Phone: FC<RouteComponentProps<{ id: string }>> = ({ match }) => {
         <div className="col-md-7">
           <h2>{phone.productName}</h2>
           <h3>{phone.productDescription}</h3>
-          <p>
-            Product code: <span>{phone.id}</span>
-          </p>
           <p style={{ color: "#54C0A1" }}>In Stock</p>
           <div className="row ml-1">
             <h6 className="mr-5">
