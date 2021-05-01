@@ -1,12 +1,12 @@
 export type Phone = {
   id: number;
-  name: string;
-  code: string;
-  price: number;
+  productName: string;
+  productCode: string;
+  productPrice: number;
   stockAmount: number;
   image: string;
-  description: string;
-  filename: string;
+  productDescription: string;
+  fileName: string;
   color: string;
   brand: any;
   internalMemory: string;

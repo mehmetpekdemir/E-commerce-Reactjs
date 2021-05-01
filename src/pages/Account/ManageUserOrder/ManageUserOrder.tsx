@@ -98,10 +98,10 @@ const ManageUserOrder: FC = () => {
                     {orderItem.phone.id}
                   </Link>
                 </th>
-                <th>{orderItem.phone.description}</th>
+                <th>{orderItem.phone.productDescription}</th>
                 <th>{orderItem.phone.color}</th>
                 <th>{orderItem.quantity}</th>
-                <th>{orderItem.phone.price}.0 $</th>
+                <th>{orderItem.phone.productPrice}.0 $</th>
                 <th>{orderItem.amount}.0 $</th>
               </tr>
             );

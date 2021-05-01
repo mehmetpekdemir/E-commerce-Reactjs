@@ -130,14 +130,15 @@ const Cart: FC = () => {
                     <div className="row no-gutters">
                       <div className="col-2 mx-3 my-3">
                         <img
-                          src={IMG_URL + `${phone.filename}`}
+                          src={IMG_URL + phone.fileName}
                           className="img-fluid"
+                          alt="empty"
                         />
                       </div>
                       <div className="col-6">
                         <div className="card-body">
                           <h4 className="card-title">
-                            {phone.name + " " + phone.description}
+                            {phone.productName + " " + phone.productDescription}
                           </h4>
                           <p className="card-text">{phone.color}</p>
                           <p className="card-text">
@@ -177,7 +178,7 @@ const Cart: FC = () => {
                         <div className="card-body">
                           <h5 className="card-title">
                             <span>
-                              $ {phone.price * phoneInCart.get(phone.id)}
+                              $ {phone.productPrice * phoneInCart.get(phone.id)}
                             </span>
                           </h5>
                           <button

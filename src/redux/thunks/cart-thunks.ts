@@ -25,7 +25,7 @@ export const fetchCart = (data: Array<number>) => async (
     const phone: Phone = response.data.find(
       (phone: { id: number }) => phone.id === key
     );
-    total += phone.price * value;
+    total += phone.productPrice * value;
   });
   dispatch(fetchCartSuccess(response.data));
   dispatch(calculateCartPriceSuccess(total));
@@ -43,7 +43,7 @@ export const calculateCartPrice = (phones: Array<Phone> | any) => (
     const phone: Phone = phones.find(
       (phone: { id: number }) => phone.id === key
     );
-    total += phone.price * value;
+    total += phone.productPrice * value;
   });
   dispatch(calculateCartPriceSuccess(total));
 };

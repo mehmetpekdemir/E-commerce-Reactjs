@@ -239,14 +239,15 @@ const Order: FC = () => {
                     >
                       <div className="card mb-5">
                         <img
-                          src={IMG_URL + `${phone.filename}`}
+                          src={IMG_URL + phone.fileName}
                           className="rounded mx-auto w-50"
+                          alt="empty"
                         />
                         <div className="card-body text-center">
-                          <h5>{phone.name}</h5>
-                          <h6>{phone.description}</h6>
+                          <h5>{phone.productName}</h5>
+                          <h6>{phone.productDescription}</h6>
                           <h6>
-                            <span>Price: $ {phone.price}</span>.00
+                            <span>Price: $ {phone.productPrice}</span>.00
                           </h6>
                           <h6>
                             <span>

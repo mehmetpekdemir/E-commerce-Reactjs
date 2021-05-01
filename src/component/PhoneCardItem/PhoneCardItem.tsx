@@ -28,13 +28,12 @@ const PhoneCardItem: FC<PropsType> = ({
           effect="blur"
           className="d-block mx-auto"
           style={{ width: "89px", height: "89px" }}
-          src={IMG_URL + `${phone.filename}`}
+          src={IMG_URL + phone.fileName}
         />
         <div className="card-body text-center">
-          <h5>{phone.name}</h5>
-          <h6>{phone.description}</h6>
+          <h5>{phone.productName}</h5>
           <h6>
-            <span>${phone.price}</span>.00
+            <span>${phone.productPrice}</span>.00
           </h6>
         </div>
         <div className="text-center align-items-end mb-3">

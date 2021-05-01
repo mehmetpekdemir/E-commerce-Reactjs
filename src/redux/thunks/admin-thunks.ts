@@ -91,7 +91,7 @@ export const fetchAllUsers = () => async (dispatch: Dispatch) => {
 export const fetchUserInfo = (id: string) => async (dispatch: Dispatch) => {
   const response = await axios({
     method: "GET",
-    url: API_BASE_URL + "/admin/user/" + id,
+    url: API_BASE_URL + "/admin/users/" + id,
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("token"),

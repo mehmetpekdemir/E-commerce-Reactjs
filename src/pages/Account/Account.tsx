@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { fetchUserInfo } from "../../redux/thunks/user-thunks";
 import { fetchPhones } from "../../redux/thunks/phone-thunks";
+import { fetchAllUsers } from "../../redux/thunks/admin-thunks";
 import PersonalOrdersList from "./PersonalOrdersList/PersonalOrdersList";
 import ChangePassword from "./ChangePassword/ChangePassword";
 import PersonalData from "./PersonalData/PersonalData";
@@ -30,6 +31,7 @@ const Account: FC = () => {
   useEffect(() => {
     dispatch(fetchUserInfo());
     dispatch(fetchPhones());
+    dispatch(fetchAllUsers());
   }, []);
 
   return (
@@ -116,6 +118,11 @@ const Account: FC = () => {
           />
           {localStorage.getItem("userRole") === "ADMIN" ? (
             <>
+              <Route
+                exact
+                path="/account/admin/phones"
+                component={() => <PhoneList />}
+              />
               <Route
                 exact
                 path="/account/admin/orders"

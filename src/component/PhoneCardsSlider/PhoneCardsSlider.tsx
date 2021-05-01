@@ -45,14 +45,15 @@ const PhoneCardsSlider: FC = () => {
                   <div className="card" key={phone.id}>
                     <img
                       className="d-block mx-auto w-50"
-                      src={IMG_URL + `${phone.filename}`}
+                      src={IMG_URL + phone.fileName}
+                      alt="empty"
                     />
                     <div className="card-body text-center">
-                      <h5>{phone.name}</h5>
-                      <h6>{phone.description}</h6>
+                      <h5>{phone.productName}</h5>
                       <h6>
-                        $<span>{phone.price}</span>.00
+                        $<span>{phone.productPrice}</span>.00
                       </h6>
+
                       <Link to={`/product/${phone.id}`}>
                         <span className="btn btn-dark">SHOW MORE</span>
                       </Link>

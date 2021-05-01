@@ -8,8 +8,8 @@ const Footer: FC = () => {
       <div className="container">
         <div className="d-flex justify-content-between">
           <div className="footer-left">
-            <h3>Phone</h3>
-            <p>(123) 123-22-33</p>
+            <h3>Amut.com</h3>
+            <p>Support number : (123) 123-22-33</p>
             <br />
             <p>from 08:00 to 20:00 without breaks and weekends</p>
           </div>
