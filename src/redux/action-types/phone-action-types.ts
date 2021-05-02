@@ -5,6 +5,8 @@ export const FETCH_PHONES_BY_QUERY_SUCCESS = "FETCH_PHONES_BY_QUERY_SUCCESS";
 export const FETCH_PHONE_BY_QUERY_SUCCESS = "FETCH_PHONE_BY_QUERY_SUCCESS";
 export const FETCH_PHONE_SUCCESS = "FETCH_PHONE_SUCCESS";
 export const FETCH_PHONES_BY_NAME_SUCCESS = "FETCH_PHONES_BY_NAME_SUCCESS";
+export const FETCH_PHONES_BY_FILTER_PARAMS_SUCCESS =
+  "FETCH_PHONES_BY_FILTER_PARAMS_SUCCESS";
 
 export type GetPhonesActionType = {
   type: typeof FETCH_PHONES;
@@ -26,9 +28,15 @@ export type FetchPhoneSuccessActionType = {
   payload: Phone;
 };
 
+export type FetchPhonesByFilterParamsSuccessActionType = {
+  type: typeof FETCH_PHONES_BY_FILTER_PARAMS_SUCCESS;
+  payload: Array<Phone>;
+};
+
 export type PhoneActionTypes =
   | GetPhonesActionType
   | FetchPhonesByQuerySuccessActionType
   | FetchPhoneByQuerySuccessActionType
   | FetchPhoneByQuerySuccessActionType
-  | FetchPhoneSuccessActionType;
+  | FetchPhoneSuccessActionType
+  | FetchPhonesByFilterParamsSuccessActionType;

@@ -4,10 +4,12 @@ import {
   FETCH_PHONE_SUCCESS,
   FETCH_PHONES_BY_QUERY_SUCCESS,
   FETCH_PHONE_BY_QUERY_SUCCESS,
+  FETCH_PHONES_BY_FILTER_PARAMS_SUCCESS,
   FetchPhonesByQuerySuccessActionType,
   FetchPhoneByQuerySuccessActionType,
   FetchPhoneSuccessActionType,
   GetPhonesActionType,
+  FetchPhonesByFilterParamsSuccessActionType,
 } from "../action-types/phone-action-types";
 
 export const getPhones = (phones: Array<Phone>): GetPhonesActionType => ({
@@ -34,4 +36,11 @@ export const fetchPhoneSuccess = (
 ): FetchPhoneSuccessActionType => ({
   type: FETCH_PHONE_SUCCESS,
   payload: phone,
+});
+
+export const fetchPhonesByFilterParamsSuccess = (
+  phones: Array<Phone>
+): FetchPhonesByFilterParamsSuccessActionType => ({
+  type: FETCH_PHONES_BY_FILTER_PARAMS_SUCCESS,
+  payload: phones,
 });

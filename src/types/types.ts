@@ -7,7 +7,7 @@ export type Phone = {
   image: string;
   productDescription: string;
   fileName: string;
-  file: any
+  file: any;
   color: string;
   brand: any;
   internalMemory: string;
@@ -131,6 +131,7 @@ export type AuthErrors = {
 };
 
 export type FilterParamsType = {
+  brands: Array<string>;
   prices: Array<number>;
 };
 

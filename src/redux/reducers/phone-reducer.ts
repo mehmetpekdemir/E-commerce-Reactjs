@@ -4,6 +4,7 @@ import {
   FETCH_PHONE_SUCCESS,
   FETCH_PHONES_BY_QUERY_SUCCESS,
   FETCH_PHONE_BY_QUERY_SUCCESS,
+  FETCH_PHONES_BY_FILTER_PARAMS_SUCCESS,
   PhoneActionTypes,
 } from "../action-types/phone-action-types";
 
@@ -43,6 +44,8 @@ const reducer = (
         phone: action.payload,
         reviews: action.payload.reviews,
       };
+    case FETCH_PHONES_BY_FILTER_PARAMS_SUCCESS:
+      return { ...state, phones: action.payload };
 
     default:
       return state;
