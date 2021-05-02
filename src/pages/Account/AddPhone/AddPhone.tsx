@@ -79,7 +79,7 @@ const AddPhone: FC = () => {
       setShowToast(true);
       setTimeout(() => {
         setShowToast(false);
-      }, 5000);
+      }, 2000);
       window.scrollTo(0, 0);
       dispatch(fetchPhones());
     }
@@ -218,7 +218,7 @@ const AddPhone: FC = () => {
                 }
                 name="brand"
                 value={brand}
-                placeholder="Enter the internal memory"
+                placeholder="Enter the brand"
                 onChange={handleInputChange}
               />
               <div className="invalid-feedback">{brandError}</div>
@@ -232,7 +232,7 @@ const AddPhone: FC = () => {
                 }
                 name="color"
                 value={color}
-                placeholder="Enter the internal memory"
+                placeholder="Enter the color"
                 onChange={handleInputChange}
               />
               <div className="invalid-feedback">{colorError}</div>
@@ -262,7 +262,7 @@ const AddPhone: FC = () => {
                 }
                 name="fileName"
                 value={fileName}
-                placeholder="Enter the internal memory"
+                placeholder="Enter the product image name"
                 onChange={handleInputChange}
               />
               <div className="invalid-feedback">{fileNameError}</div>

@@ -7,6 +7,7 @@ export type Phone = {
   image: string;
   productDescription: string;
   fileName: string;
+  file: any
   color: string;
   brand: any;
   internalMemory: string;
