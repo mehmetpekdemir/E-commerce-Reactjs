@@ -22,7 +22,11 @@ const SliderBrands: FC = () => {
                 <Link to={{ pathname: "/menu", state: { id: brand.name } }}>
                   <img className="img-fluid" src={brand.url} alt={brand.name} />
                 </Link>
+                <br></br>
+                <br></br>
+                <br></br>
               </div>
+             
             );
           })}
         </Carousel.Item>
@@ -33,6 +37,9 @@ const SliderBrands: FC = () => {
                 <Link to={{ pathname: "/menu", state: { id: brand.name } }}>
                   <img className="img-fluid" src={brand.url} alt={brand.name} />
                 </Link>
+                <br></br>
+                <br></br>
+                <br></br>
               </div>
             );
           })}
@@ -44,6 +51,9 @@ const SliderBrands: FC = () => {
                 <Link to={{ pathname: "/menu", state: { id: brand.name } }}>
                   <img className="img-fluid" src={brand.url} alt={brand.name} />
                 </Link>
+                <br></br>
+                <br></br>
+                <br></br>
               </div>
             );
           })}

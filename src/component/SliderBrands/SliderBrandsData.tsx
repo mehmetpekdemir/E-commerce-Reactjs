@@ -1,28 +1,28 @@
 import { BrandType } from "../../types/types";
 
 export const brandsItem1: Array<BrandType> = [
-  { name: "Tom Ford", url: "https://i.ibb.co/s9MpxnG/o-139.jpg" },
-  { name: "Prada", url: "https://i.ibb.co/2Y5Lsvy/o-143.jpg" },
-  { name: "Dior", url: "https://i.ibb.co/wCkG15S/o-160.jpg" },
-  { name: "Versace", url: "https://i.ibb.co/0mFhYdV/o-97.jpg" },
-  { name: "Chanel", url: "https://i.ibb.co/QrNd9DL/o-30.jpg" },
-  { name: "Dolce&Gabbana", url: "https://i.ibb.co/Sycbcbv/o-56.jpg" },
+  { name: "Iphone", url: "https://i.ibb.co/xhVHw9K/logo1.png" },
+  { name: "Samsung", url: "https://i.ibb.co/prcSkKf/logo10.png" },
+  { name: "Sony", url: "https://i.ibb.co/191DzpJ/logo11.png" },
+  { name: "Huawei", url: "https://i.ibb.co/6npTNqv/logo21.jpg" },
+  { name: "Xiaomi", url: "https://i.ibb.co/d5t36w0/logo20.png" },
+  { name: "LG", url: "https://i.ibb.co/qpQ4X8s/logo6.png" },
 ];
 
 export const brandsItem2: Array<BrandType> = [
-  { name: "Gucci", url: "https://i.ibb.co/z6gQzvg/o-67.jpg" },
-  { name: "Givenchy", url: "https://i.ibb.co/0hT49zf/o-66.jpg" },
-  { name: "Creed", url: "https://i.ibb.co/yR1mZP4/o-50.jpg" },
-  { name: "Jean Paul Gaultier", url: "https://i.ibb.co/tHFz6W2/o-72.jpg" },
-  { name: "Paco Rabanne", url: "https://i.ibb.co/k440VSk/o-88.jpg" },
-  { name: "Giorgio Armani", url: "https://i.ibb.co/qkkBXBT/o-65.jpg" },
+  { name: "Acer", url: "https://i.ibb.co/M2vqwRJ/logo2.png" },
+  { name: "BlackBerry", url: "https://i.ibb.co/CmKdBnG/logo3.png" },
+  { name: "HTC", url: "https://i.ibb.co/wNr1qxW/logo5.png" },
+  { name: "Microsoft", url: "https://i.ibb.co/yRBv1pP/logo18.png" },
+  { name: "Vestel", url: "https://i.ibb.co/L6zCzWG/logo13.png" },
+  { name: "Oppo", url: "https://i.ibb.co/qNN2S20/logo9.png" },
 ];
 
 export const brandsItem3: Array<BrandType> = [
-  { name: "Bvlgari", url: "https://i.ibb.co/58FfNSb/o-14.jpg" },
-  { name: "Calvin Klein", url: "https://i.ibb.co/98r6KXm/o-18.jpg" },
-  { name: "Hermes", url: "https://i.ibb.co/jL0gNjg/o-69.jpg" },
-  { name: "Hugo Boss", url: "https://i.ibb.co/RgY9GLG/o-70.jpg" },
-  { name: "Lancome", url: "https://i.ibb.co/Jkzsj7v/o-80.jpg" },
-  { name: "Burberry", url: "https://i.ibb.co/MRrJCgQ/o-104.jpg" },
+  { name: "Panasonic", url: "https://i.ibb.co/yyLyZDy/logo16.png" },
+  { name: "Philips", url: "https://i.ibb.co/0m35NNw/logo15.png" },
+  { name: "Motorola", url: "https://i.ibb.co/MNL8FRD/logo7.png" },
+  { name: "Google", url: "https://i.ibb.co/fHqLthH/logo4.png" },
+  { name: "Razer", url: "https://i.ibb.co/LvzR7Dv/logo14.png" },
+  { name: "Nokia", url: "https://i.ibb.co/ZJxXQt9/logo8.png" },
 ];

@@ -72,18 +72,7 @@ const PhoneCardsSlider: FC = () => {
 
   return (
     <div>
-      <div className="container text-center my-3">
-        <h3>PERSONALLY RECOMMENDED</h3>
-      </div>
-      <div className="container mt-5" id="indicators">
-        <form method="get" action="/">
-          <Carousel {...settings}>
-            {addCarouselItems(phones, 0)}
-            {addCarouselItems(phones, 4)}
-            {addCarouselItems(phones, 8)}
-          </Carousel>
-        </form>
-      </div>
+      
     </div>
   );
 };
