@@ -14,12 +14,12 @@ type InitialStateType = {
   productCode: string;
   productPrice: number;
   stockAmount: number;
-  image: string;
   productDescription: string;
   fileName: string;
   color: string;
   brand: string;
   internalMemory: string;
+  file: string | Blob;
 };
 
 const AddPhone: FC = () => {
@@ -36,12 +36,12 @@ const AddPhone: FC = () => {
     productCode: "",
     productPrice: 0,
     stockAmount: 0,
-    image: "",
     productDescription: "",
     fileName: "",
     color: "",
     brand: "",
     internalMemory: "",
+    file: "",
   };
 
   const [
@@ -50,12 +50,12 @@ const AddPhone: FC = () => {
       productCode,
       productPrice,
       stockAmount,
-      image,
       productDescription,
       fileName,
       color,
       brand,
       internalMemory,
+      file,
     },
     setState,
   ] = useState(initialState);
@@ -66,11 +66,11 @@ const AddPhone: FC = () => {
     productCodeError,
     productPriceError,
     stockAmountError,
-    imageError,
     productDescriptionError,
     colorError,
     brandError,
     internalMemoryError,
+    fileNameError,
   } = errors;
 
   useEffect(() => {
@@ -89,7 +89,7 @@ const AddPhone: FC = () => {
     event.preventDefault();
 
     const bodyFormData: FormData = new FormData();
-    bodyFormData.append("fileName", fileName);
+    bodyFormData.append("file", file);
     bodyFormData.append(
       "phone",
       new Blob(
@@ -99,7 +99,6 @@ const AddPhone: FC = () => {
             productCode,
             productPrice,
             stockAmount,
-            image,
             productDescription,
             fileName,
             color,
@@ -259,23 +258,19 @@ const AddPhone: FC = () => {
               <input
                 type="text"
                 className={
-                  imageError ? "form-control is-invalid" : "form-control"
+                  fileNameError ? "form-control is-invalid" : "form-control"
                 }
-                name="image"
-                value={image}
+                name="fileName"
+                value={fileName}
                 placeholder="Enter the internal memory"
                 onChange={handleInputChange}
               />
-              <div className="invalid-feedback">{imageError}</div>
+              <div className="invalid-feedback">{fileNameError}</div>
             </div>
 
             <div className="form row mt-3">
               <div className="col" style={{ marginTop: "35px" }}>
-                <input
-                  type="file"
-                  name="fileName"
-                  onChange={handleFileChange}
-                />
+                <input type="file" name="file" onChange={handleFileChange} />
               </div>
             </div>
           </div>
