@@ -6,9 +6,9 @@ const PhonePriceListView = (props) => {
     const calculateAverage = () => {
 
         let data = [];
-        data.push(products.filter((product) => ((product.brand === "IPHONE")))); //productName olacak.
+        data.push(products.filter((product) => ((product.productName === "iphone7"))));
 
-        let priceList = [];
+        let priceList = [0];
         data.map((arr) => (
             arr.map((price) => priceList.push(price.productPrice))
         ));
@@ -23,7 +23,7 @@ const PhonePriceListView = (props) => {
 
     return (
         <>
-            <h3>{average}</h3>
+            <h3>Average price = {average}</h3>
         </>
 
     )
