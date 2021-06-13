@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Select from 'react-select'
 
 const PhonePriceListView = (props) => {
@@ -36,7 +36,6 @@ const PhonePriceListView = (props) => {
             let average = (totalPrices / (totalCount - 1));
             return average;
         }
-
     }
 
     const handleChange = (selectedOption) => {
@@ -50,7 +49,9 @@ const PhonePriceListView = (props) => {
                 options={options}
                 onChange={handleChange} />
             </div>
-            <div><h3>Average price = {average}</h3></div>
+            <div>
+                <h3 className="mt-4 col-md-6 col-offset-4">Average price = {average}</h3>
+            </div>
         </>
 
     )

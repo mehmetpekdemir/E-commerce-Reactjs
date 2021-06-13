@@ -26,6 +26,7 @@ import ManageUserOrder from "./ManageUserOrder/ManageUserOrder";
 import "./Account.css";
 import AddPhone from "./AddPhone/AddPhone";
 import EditPhone from "./EditPhone/EditPhone";
+import PhonePriceList from "../PhonePriceList/PhonePriceList";
 
 const Account: FC = () => {
   const dispatch = useDispatch();
@@ -59,6 +60,13 @@ const Account: FC = () => {
                 activeClassName="is-active"
               >
                 Add phone
+              </NavLink>
+              <NavLink
+                to={"/account/products/price"}
+                className="account-sidebar-link nav-link"
+                activeClassName="is-active"
+              >
+                Average product price
               </NavLink>
               <NavLink
                 to={"/account/admin/phones"}
@@ -129,6 +137,11 @@ const Account: FC = () => {
                 exact
                 path="/account/admin/add"
                 component={() => <AddPhone />}
+              />
+              <Route
+                exact
+                path="/account/products/price"
+                component={() => <PhonePriceList />}
               />
               <Route
                 exact

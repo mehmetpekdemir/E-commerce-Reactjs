@@ -13,7 +13,6 @@ import Order from "../Order/Order";
 import OrderFinalize from "../Order/OrderFinalize/OrderFinalize";
 import Cart from "../Cart/Cart";
 import Phone from "../Phone/Phone";
-import PhonePriceList from "../PhonePriceList/PhonePriceList";
 
 const App: FC = () => {
   return (
@@ -29,7 +28,6 @@ const App: FC = () => {
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/order" component={Order} />
         <Route exact path="/order/finalize" component={OrderFinalize} />
-        <Route exact path="/products/price" component={PhonePriceList} />
         <Route
           path="/account"
           render={() =>
