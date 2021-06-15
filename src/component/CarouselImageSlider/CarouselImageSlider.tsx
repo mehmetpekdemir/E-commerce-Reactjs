@@ -6,17 +6,17 @@ const sliderItems = [
   {
     id: "59",
     name: "Photo 2",
-    url: "https://i.ibb.co/kJnb7Kd/b3.jpg",
+    url: "https://i.ibb.co/ZLrfm8Q/b3.jpg",
   },
   {
     id: "98",
     name: "Photo 1",
-    url: "https://i.ibb.co/x61LHjb/b2.jpg",
+    url: "https://i.ibb.co/GkhhxfX/b2.jpg",
   },
   {
     id: "11",
     name: "Photo 3",
-    url: "https://i.ibb.co/BqdXL7j/b1.jpg",
+    url: "https://i.ibb.co/S6Vq2PB/b1.jpg",
   },
 ];
 

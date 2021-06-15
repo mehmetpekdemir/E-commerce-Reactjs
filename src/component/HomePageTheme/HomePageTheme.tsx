@@ -10,7 +10,7 @@ const HomePageTheme: FC = () => {
             <Link to={{ pathname: "/menu", state: { id: "female" } }}>
               <img
                 className="img-fluid"
-                src="https://i.ibb.co/nQ8s38y/c3.jpg"
+                src="https://i.ibb.co/stCZnPf/c3.jpg"
                 alt="empty"
               />
             </Link>
@@ -21,7 +21,7 @@ const HomePageTheme: FC = () => {
             <Link to={{ pathname: "/menu", state: { id: "male" } }}>
               <img
                 className="img-fluid"
-                src="https://i.ibb.co/pbY6tv8/c4.jpg"
+                src="https://i.ibb.co/C7VsBX0/c4.jpg"
                 alt="empty"
               />
             </Link>

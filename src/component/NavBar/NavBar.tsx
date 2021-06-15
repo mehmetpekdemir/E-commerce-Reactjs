@@ -74,7 +74,7 @@ const NavBar: FC = () => {
         className="container-fluid header-top d-none d-md-block pb-5 pt-5"
       >
         <img
-          src="https://i.ibb.co/0fx1s1R/logomuz.jpg"
+          src="https://i.ibb.co/ZKmnCCF/logomuz.jpg"
           className="rounded mx-auto d-block"
           alt="empty"
         />
