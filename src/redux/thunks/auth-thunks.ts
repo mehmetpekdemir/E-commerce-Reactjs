@@ -10,6 +10,7 @@ import {
   registerSuccess,
   showLoader,
 } from "../actions/auth-actions";
+import alertify from "alertifyjs";
 
 import { UserData, UserRegistration } from "../../types/types";
 
@@ -42,6 +43,7 @@ export const registration = (userRegistrationData: UserRegistration) => async (
       userRegistrationData
     );
     dispatch(registerSuccess(response.data));
+    alertify.success("Email sending successfully, please approve your account  ",5);
   } catch (error) {
     dispatch(registerFailure(error.response.data));
   }

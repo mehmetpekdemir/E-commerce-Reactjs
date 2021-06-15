@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import App from "./pages/App/App";
 import reportWebVitals from "./reportWebVitals";
+import "alertifyjs/build/css/alertify.min.css";
 
 import store from "./store";
 
